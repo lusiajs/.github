@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="136" height="40" viewBox="0 0 136 40" role="img" aria-label="Status beta">
+  <style>
+    text { font: 600 14px ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; }
+    .glow { animation: pulse 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    @keyframes pulse { 50% { opacity: .35; transform: scale(1.6); } }
+    @media (prefers-reduced-motion: reduce) { .glow { animation: none; } }
+  </style>
+  <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#ff8fc7"/><stop offset="1" stop-color="#fff08a"/></linearGradient></defs>
+  <rect x="1" y="1" width="134" height="38" rx="19" fill="#14121c" stroke="url(#g)" stroke-width="2"/>
+  <circle class="glow" cx="22" cy="20" r="6" fill="#ff8fc7" opacity=".7"/>
+  <text x="38" y="25" fill="#c9c4dc">Status</text>
+  <text x="88" y="25" fill="url(#g)" font-weight="800">beta</text>
+</svg>
