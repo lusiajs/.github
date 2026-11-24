@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" role="img" aria-label="Lusia: a UI framework for Bun">
+  <style>
+    .bg { fill: #14121c; }
+    .word { font: 800 112px ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; letter-spacing: -4px; }
+    .tag { font: 500 26px ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif; fill: #c9c4dc; }
+    .blob { mix-blend-mode: screen; opacity: .55; }
+    .b1 { animation: drift1 14s ease-in-out infinite alternate; }
+    .b2 { animation: drift2 18s ease-in-out infinite alternate; }
+    .b3 { animation: drift3 16s ease-in-out infinite alternate; }
+    .cat { transform-origin: 230px 165px; animation: bob 4s ease-in-out infinite; }
+    .tail { transform-box: fill-box; transform-origin: 0% 100%; animation: wag 1.6s ease-in-out infinite; }
+    .shine { animation: shine 6s linear infinite; }
+    @keyframes drift1 { to { transform: translate(120px, 40px); } }
+    @keyframes drift2 { to { transform: translate(-140px, -30px); } }
+    @keyframes drift3 { to { transform: translate(80px, -50px); } }
+    @keyframes bob { 50% { transform: translateY(-8px) rotate(-2deg); } }
+    @keyframes wag { 50% { transform: rotate(-9deg); } }
+    @keyframes shine { from { transform: translateX(-700px); } to { transform: translateX(900px); } }
+    @media (prefers-reduced-motion: reduce) { * { animation: none !important; } }
+  </style>
+  <defs>
+    <clipPath id="card"><rect width="1200" height="320" rx="28"/></clipPath>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="60"/></filter>
+    <linearGradient id="ink" x1="0" x2="1">
+      <stop offset="0" stop-color="#7cc8ff"/>
+      <stop offset=".35" stop-color="#b9a4ff"/>
+      <stop offset=".7" stop-color="#ff8fc7"/>
+      <stop offset="1" stop-color="#fff08a"/>
+    </linearGradient>
+    <linearGradient id="glint" x1="0" x2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity=".55"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="wordclip"><text class="word" x="400" y="178">Lusia</text></clipPath>
+  </defs>
+  <g clip-path="url(#card)">
+    <rect class="bg" width="1200" height="320"/>
+    <g filter="url(#soft)">
+      <circle class="blob b1" cx="180" cy="80" r="150" fill="#7cc8ff"/>
+      <circle class="blob b2" cx="1000" cy="260" r="170" fill="#ff8fc7"/>
+      <circle class="blob b3" cx="640" cy="40" r="130" fill="#b9a4ff"/>
+      <circle class="blob b1" cx="1080" cy="40" r="90" fill="#7ef0c8"/>
+    </g>
+    <g class="cat">
+      <svg x="120" y="55" width="220" height="220" viewBox="0 0 128 128">
+        <g transform="rotate(7 64 64) translate(-8 2)">
+          <g fill="#fff" stroke="#fff" stroke-width="18" stroke-linejoin="round"><path d="M26 48L66 48L66 86L100 86L100 114L26 114ZM26 52L30 20L46 52ZM66 52L62 20L46 52Z"/></g>
+          <g class="tail"><path d="M98 104C116 104 120 86 114 70C111 61 116 54 122 52" fill="none" stroke="#fff" stroke-width="21" stroke-linecap="round"/><path d="M98 104C116 104 120 86 114 70C111 61 116 54 122 52" fill="none" stroke="#111" stroke-width="9" stroke-linecap="round"/></g>
+          <g fill="#111" stroke="#111" stroke-width="6" stroke-linejoin="round"><path d="M26 48L66 48L66 86L100 86L100 114L26 114ZM26 52L30 20L46 52ZM66 52L62 20L46 52Z"/></g>
+          <path d="M30 50L34 32L41 50Z M62 50L58 32L51 50Z" fill="#fff" stroke="#fff" stroke-width="2" stroke-linejoin="round"/>
+        </g>
+      </svg>
+    </g>
+    <text class="word" x="400" y="178" fill="url(#ink)">Lusia</text>
+    <g clip-path="url(#wordclip)"><rect class="shine" x="400" y="60" width="160" height="140" fill="url(#glint)"/></g>
+    <text class="tag" x="406" y="230">A UI framework for Bun. One file per component.</text>
+  </g>
+</svg>
