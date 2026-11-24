@@ -6,7 +6,7 @@
   <a href="https://github.com/sponsors/AzPepoze"><img src="https://raw.githubusercontent.com/lusiajs/.github/main/profile/badges/sponsor.svg" height="34" alt="Sponsor"></a>
 </p>
 
-**Lusia** is a UI framework for [Bun](https://bun.sh). Each component lives in one `.lusia` file with its TypeScript, HTML and SCSS. When your variables change, the page updates.
+**Lusia** is a UI framework for [Bun](https://bun.sh). Each component lives in one `.lusia` file with its TypeScript, HTML and SCSS. Small, fast updates, with motion built in.
 
 ### The story
 
